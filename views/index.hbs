@@ -1,0 +1,18 @@
+<button id="but">Посмотреть все</button>
+<p id='out'></p>
+<script>
+but.onclick = async () =>{
+   const reqComparison = await fetch(
+            '/getall',
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                method: 'POST',
+                body: JSON.stringify({key: 'value'})
+            });
+        const arrSortUserId = await reqComparison.json();
+        console.log(arrSortUserId)
+
+}
+</script>
