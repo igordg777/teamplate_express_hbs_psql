@@ -34,7 +34,7 @@ app.post('/getall', (req, res, next) => {
         if (err) {
             console.log("Can not connect to the DB" + err);
         }
-        client.query('SELECT * FROM users', function (err, result) {
+        client.query('SELECT * FROM users2', function (err, result) {
             done();
             if (err) {
                 console.log(err);
