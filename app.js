@@ -21,7 +21,7 @@ app.get('/main', function (req, res) {
 const config = {
     user: 'postgres',
     database: 'testdb',
-    password: 'postgres',
+    password: 'psql',
     port: 5432
 };
 
