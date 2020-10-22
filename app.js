@@ -28,6 +28,8 @@ const config = {
 // pool takes the object above -config- as parameter
 const pool = new pg.Pool(config);
 
+ console.log(pool)
+
 app.post('/getall', (req, res, next) => {
     pool.connect(function (err, client, done) {
         if (err) {
