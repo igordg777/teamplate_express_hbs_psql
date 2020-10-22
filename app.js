@@ -21,14 +21,13 @@ app.get('/main', function (req, res) {
 const config = {
     user: 'postgres',
     database: 'testdb',
-    password: 'psql',
+    password: 'postgres',
     port: 5432
 };
 
 // pool takes the object above -config- as parameter
 const pool = new pg.Pool(config);
 
- console.log(pool)
 
 app.post('/getall', (req, res, next) => {
     pool.connect(function (err, client, done) {
